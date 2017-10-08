@@ -1,18 +1,51 @@
-<div class="employee-info-container">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h6 class="panel-title" [ngClass]="setTitleClass()">
-          Employee Information
-      </h6>
-    </div>
-    <div class="panel-body" [style.border]="'solid 1px red'">
-      <div class="employee-id" [attr.data-employeeid]="employeeId">
-        <img class="employee-id-img" [class.id-border]="showIdBorder" [src]="idpath">
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- ngModel-start -->
+      <div class="employee-info-container">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h6 class="panel-title">
+                Employee Entry
+            </h6>
+          </div>
+          <div class="panel-body">
+            <label>First Name</label>
+            <input type="text" [(ngModel)]="firstName">
+            <label>Last Name</label>
+            <input type="text" [(ngModel)]="lastName">
+            <label>ID path</label>
+            <input type="text" [(ngModel)]="idpath">
+            <label>Show Id Border</label>
+            <input type="checkbox" [(ngModel)]="showIdBorder">
+          </div>
+        </div>
       </div>
-      <label [ngStyle]="setStyle()">Employee Name:</label>
-      <span>{{firstName}} {{lastName}}</span>
-      <label [ngStyle]="{'color':'red'}">Position:</label>
-      <span>{{position}}</span>
+      <!-- ngModel-end -->
+    </div>
+    <div class="col-lg-6">
+      <div class="employee-info-container">
+        <!-- info-start -->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h6 class="panel-title" [ngClass]="setTitleClass()">
+                Employee Information
+            </h6>
+          </div>
+          <div class="panel-body" [style.border]="'solid 1px red'">
+            <div class="employee-id" [attr.data-employeeid]="employeeId">
+              <img class="employee-id-img" [class.id-border]="showIdBorder" [src]="idpath">
+            </div>
+            <label [ngStyle]="setStyle()">Employee Name:</label>
+            <span>{{firstName}} {{lastName}}</span>
+            <label [ngStyle]="{'color':'red'}">Position:</label>
+            <span>{{position}}</span>
+          </div>
+        </div>
+      </div>
+      <!-- info-end -->
     </div>
   </div>
 </div>
