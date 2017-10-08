@@ -2,3 +2,24 @@
   margin: auto;
   width: 300px;
 }
+
+.employee-id{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.employee-id-img{
+  width: 140px;
+  height: 140px;
+  margin: auto;
+}
+
+.id-border{
+  border: solid 3px blue;
+}
+
+.highlight-title{
+  font-weight: bold;
+  color: green;
+}

@@ -1,15 +1,18 @@
 <div class="employee-info-container">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h6 class="panel-title">
+      <h6 class="panel-title" [ngClass]="setTitleClass()">
           Employee Information
       </h6>
     </div>
-    <div class="panel-body">
-      <label>Employee Name:</label>
-      <span>Tyrion Lannister</span>
-      <label>Position:</label>
-      <span>Hand of the Queen</span>
+    <div class="panel-body" [style.border]="'solid 1px red'">
+      <div class="employee-id" [attr.data-employeeid]="employeeId">
+        <img class="employee-id-img" [class.id-border]="showIdBorder" [src]="idpath">
+      </div>
+      <label [ngStyle]="setStyle()">Employee Name:</label>
+      <span>{{firstName}} {{lastName}}</span>
+      <label [ngStyle]="{'color':'red'}">Position:</label>
+      <span>{{position}}</span>
     </div>
   </div>
 </div>
