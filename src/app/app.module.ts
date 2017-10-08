@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { EmployeeModule } from './employee/employee.module';
+import { EmployeeInfoComponent } from './employee/employee-info/employee-info.component';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -8,7 +9,8 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    EmployeeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
