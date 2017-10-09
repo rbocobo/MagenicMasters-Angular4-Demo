@@ -50,4 +50,8 @@ export class EmployeeInfoComponent implements OnInit {
 
     return styles;
   }
+
+  onKey(event:any){
+    this.firstName = event.target.value;
+  }
 }
