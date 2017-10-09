@@ -37,7 +37,7 @@ export class EmployeeInfoComponent implements OnInit {
 
   setTitleClass(){
     let titleClass = {
-      'highlight-title' : this.highlightTitle
+      'highlight-title':this.highlightTitle
     }
     return titleClass;
   }

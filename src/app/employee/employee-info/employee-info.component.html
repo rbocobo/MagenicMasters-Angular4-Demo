@@ -13,11 +13,12 @@
           </div>
           <div class="panel-body">
             <label>First Name</label>
-            <input type="text" [value]="firstName" (keyup)="onKey($event)">
+            <!--<input type="text" [value]="firstName" on-keyup="onKey($event)">-->
+            <input type="text" [value]="firstName" (keyup)="firstName = $event.target.value">
             <label>Last Name</label>
             <input type="text" [(ngModel)]="lastName">
             <label>ID path</label>
-            <input type="text" [(ngModel)]="idpath">
+            <input type="text" bindon-ngModel="idpath">
             <label>Show Id Border</label>
             <input type="checkbox" [(ngModel)]="showIdBorder">
           </div>
